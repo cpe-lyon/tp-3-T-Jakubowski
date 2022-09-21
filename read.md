@@ -15,4 +15,13 @@
 12. Pour trouver un user avec l'uid on utilise ```id -nu 1003```
 13. Pour trouver l'id d'un groupe on fait ```getent group dev``` ou dev est le nom du groupe.
 14. Pour voir quel groupe a pour id 1002 on fait ```getent group 1002```
-15. 
+15. On retire charlie du grp infra grace a ```gpasswd -d charlie infra```. Il va avoir les permissions other et perdre celles du groupe.
+16. Pour mettre l'expiration du compte de dave le 1 juin 2023 on fait ```chage -E 2023/06/01 dave```
+    On mets un minimum de 5 jours avant changement du mot de passe ```chage -m 5 dave```
+    On mets un maximum de 90 jours avant changement du mot de passe ```chage -M 90 dave```
+    On mets une alerte 14 avant que le mot passe doivent être changer ```chage -W 14 dave```
+    On met le compte inactif apres 30 jours apres que son mot de passe soit bloquer ```chage -I 30 dave```
+17. L'interpreteur de commande du root est bash
+18. Le compte nobody est celui qui a le moins de persmission sur les fichiers et dossiers
+19. Sudo garde le mot de passe pendant 15 minutes si on veut le forcer à oublier il faut faire ```sudo -k```
+    
