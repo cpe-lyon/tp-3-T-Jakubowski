@@ -25,3 +25,14 @@
 18. Le compte nobody est celui qui a le moins de persmission sur les fichiers et dossiers
 19. Sudo garde le mot de passe pendant 15 minutes si on veut le forcer à oublier il faut faire ```sudo -k```
     
+## Exercice 2
+---
+
+1. On a les droit -rw-rw-r-- sur le fichier qu'on crée dans notre répertoire personnel
+2. Le root a tous les droit même sur un fichier ou personne n'a de droit dessus
+3. Avec les permission -wx on pourra écrire dans le fichier mais en utilisant nano pour aller dedans on ne voit rien, nous n'avons pas les permissions.
+4. On ne peux pas executer le fichier en tant que user sans la permission read alors qu'avec sudo on peut. Car le fichier affiche du texte et qu'on a pas le droit de le lire
+5. On perds les permissions sur les fichier présents dans le dossiers ou nous n'avons pas les permissions.
+6. En enlevant la permission write sur le fichier on ne peux plus écrire dedans, en la remettant on peux réécrire dedans puis le supprimer
+7. En enlevant la permission d'éxecution sur le dossier test on ne peux plus entrer dedans, plus créer de dedans, plus supprimer dedans, etc...
+8. 
