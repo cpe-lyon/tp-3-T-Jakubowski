@@ -35,4 +35,16 @@
 5. On perds les permissions sur les fichier présents dans le dossiers ou nous n'avons pas les permissions.
 6. En enlevant la permission write sur le fichier on ne peux plus écrire dedans, en la remettant on peux réécrire dedans puis le supprimer
 7. En enlevant la permission d'éxecution sur le dossier test on ne peux plus entrer dedans, plus créer de dedans, plus supprimer dedans, etc...
-8. 
+8. Il se passe la même chose qu'a la question précédente en se plaçant dedans
+9. On execute la commande ```chmod 755 fichier``` pour n'est pas le droit en ecriture mais qu'il puisses le lire
+10. Il faut faire un ```umask 077 ./``` pour ne laisser aucune permissions dans notre repertoire personnel, il ne pourra plus lire, écrire et se déplacer dans notre repertoire personnel.
+11. Il faut faire un ```umask 000 ./``` pour laisser toutes les permissions dans notre repertoire personnel, il pourra lire, écrire et se déplacer dans notre repertoire personnel.
+12. Il faut faire un ```umask 033 ./``` pour laisser ne laissant uniquement la capacité de lire aux autre personnes et nous laisser toutes les permissions.
+13. Transcrivez les commandes suivantes de la notation classique à la notation octale ou vice-versa (vous
+pourrez vous aider de la commande stat pour valider vos réponses) :
+- chmod u=rx,g=wx,o=r fic  => ```chmod 534 fic```
+- chmod uo+w,g-rx fic en sachant que les droits initiaux de fic sont r--r-x---   =>  ```chmod 600 fic```
+- chmod 653 fic en sachant que les droits initiaux de fic sont 711  =>  ```chmod u-x,g+r,o+w fic```
+- chmod u+x,g=w,o-r fic en sachant que les droits initiaux de fic sont r--r-x---   =>  ```chmod 520 fic```
+
+14. Les permission sont -rw-r--r-- sur le fichier /etc/passwd, donc on ne peux que lire a part le root qui a tous les droit. Et l'utilisateur qui a crée le fichier peux lire et écrire dedans.
